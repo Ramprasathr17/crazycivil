@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bricks and Bits Architect</title>
+</head>
+<body>
+    <!-- Example HTML for adding a logo -->
+    <header>
+        <h1>Bricks and Bits Architect</h1>
+        <p class="slogan">Build the Future</p>
+        <img src="logo.png" alt="Bricks and Bits Architect Logo">
+    </header>
+
+
+    <section id="content">
+        <h2>Welcome to Bricks and Bits Architect</h2>
+        <p>Your go-to channel for tech, coding, and the intersection with civil engineering.</p>
+    </section>
+
+    <div class="subscribe-container">
+        <p class="subscribe">Subscribe</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bricks and Bits Architect. All rights reserved.</p>
+    </footer>
+</body>
+<!-- Add this script tag to your HTML file -->
+<script>
+    const slogan = document.querySelector('.slogan');
+
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function changeColor() {
+        slogan.style.color = getRandomColor();
+        setTimeout(changeColor, 2000); // Change color every 2 seconds
+    }
+
+    changeColor();
+</script>
+<!-- Add this script tag to your HTML file -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+<!-- Add this script tag to your HTML file -->
+<script>
+    const currentYear = new Date().getFullYear();
+    const footerText = document.querySelector('footer p');
+    footerText.innerHTML = `&copy; ${currentYear} Bricks and Bits Architect. All rights reserved.`;
+</script>
+<!-- Add this script tag to your HTML file -->
+<script>
+    const subscribeButton = document.querySelector('.subscribe');
+
+    subscribeButton.addEventListener('mouseenter', function() {
+        subscribeButton.style.color = 'bluejb'; // Change to a different color on hover
+    });
+
+    subscribeButton.addEventListener('mouseleave', function() {
+        subscribeButton.style.color = '#ff0000'; // Change back to the original color
+    });
+</script>
+
+</html>
