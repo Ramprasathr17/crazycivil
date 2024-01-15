@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Sky Blue */
+}
+
+#container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #87CEEB; /* Sky Blue */
+}
+
+#wish {
+    
+    font-size: 200%;
+    font-weight: bold;
+    margin-top: -20px;
+    color: #004d40;
+    animation: scaleIn 1s ease-in-out, colorChange 3s infinite alternate;
+}
+
+#language-switch {
+    margin-bottom: 250px;
+}
+
+#language-switch button {
+    background-color: #004d40;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#language-switch button:hover {
+    background-color: #00695c;
+}
+
+#wish-image,#click-image,#cane-image,#bird-image,#crow-image,#cane1-image,#cane2-image,#cane3-image,#cow-image,#sun-image,#cloud1-image,#cloud2-image,#cloud3-image{
+    width: 20vw;
+    height: auto;
+    border-radius: 10px;
+    position:absolute;
+    
+    animation: fadeIn 1s ease-in-out, floating 5s infinite ease-in-out;
+}
+#crow-image{
+    z-index: -2;
+     top: 10px;
+     left: -250px;
+     animation: flyBird 20s linear infinite;
+}
+#sun-image{
+    width:12vw;
+    top: 10%;
+    right: 2vw;
+}
+#cane1-image{
+    width: auto;
+    height: 75%;
+    bottom: 10px;
+    left: 0%;
+    z-index:-3;
+}
+#cane2-image{
+    width: auto;
+    height: 75%;
+    bottom: 10px;
+    left: -10%;
+    z-index:-3;
+    
+}
+#cane3-image{
+    width: auto;
+    height: 75%;
+    bottom: 10px;
+    left: 10%;
+    
+    z-index:-3;
+}
+#bird-image{
+    width: 12vw;
+    height: 15vw;
+    right: 10px;
+    top:40%;
+
+}
+#cloud1-image{
+    top: 8%;
+    left: 100px;
+}
+#cloud2-image{
+    top: 8%;
+    align-items: center;
+    z-index: -1;
+}
+#cloud3-image{
+    top: 8%;
+    right: 10vw;
+}
+#wish-image{
+    position: absolute;
+    bottom: 40%;
+    top:30%;
+    width: auto;
+    height:70%;
+    z-index:-2;
+    align-items: center;
+}
+#cow-image{
+    width: auto;
+    height: 32%;
+    bottom: 3vw;
+    right: 3vw;
+
+}
+#click-image{
+    width: auto;
+    height: 30%;
+    right: 40%;
+    left: 40%;
+}
+
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: #004d40;
+    }
+    to {
+        color: #ff6f00;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes flyBird {
+    to {
+        left: 100%; /* Move the bird to the right edge */
+    }
+}
+/* Rest of your existing CSS styles */
